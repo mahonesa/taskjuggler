@@ -266,7 +266,7 @@ textreport frame "" {
   
   textreport ProyectoIniciacion "overviewProyectoIniciacion" {
     formats html
-    center '<[report id="overview"]>'
+    center '<[report id="overviewProyectoIniciacion"]>'
   }
 
   textreport "Status" {
