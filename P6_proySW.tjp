@@ -84,6 +84,33 @@ task WMGame "Web & Mobile Game" {
   charge 60 perday
   responsible boss
 
+  task tback "Back End" {
+    chargeset back
+    responsible dev1
+    depends WMGame.tgdesign
+    task tBEd "Back End General Design" {
+      effort 5d
+      allocate dev1
+    }
+  }
+  
+  task fMov "Frontend Movil" {
+    chargeset wFront
+    responsible dev1
+    depends WMGame.tgdesign
+    task fCloud "Frontend Movil Cloud" {
+      effort 5d
+      allocate dev1
+    }
+    task fDespliegue "Frontend Movil Despliegue" {
+      depends WMGame.fMov.fCloud
+      effort 3d
+      allocate dev1
+    }
+  }
+
+
+
   task tgdesign "General System Design" {
       effort 2d
       allocate boss
