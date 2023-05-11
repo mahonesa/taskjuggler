@@ -144,7 +144,7 @@ task WMGame "Web & Mobile Game" {
     task tbackDev "Back development" {
       effort 20d
       allocate dev1, dev2
-      depends WMGame.tback.tlogic
+      depends WMGame.tBackEnd.tlogic
     }
   }
 
