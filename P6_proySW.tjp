@@ -5,7 +5,7 @@
  * some elements of itss
  */
 
-project pSix "Web Game"  2023-03-15 +2.5m {
+project pSix "Web Game"  2023-05-11 +2.5m {
   # Set the default time zone for the project. If not specified, UTC
   # is used.
   timezone "Europe/Paris"
@@ -119,7 +119,7 @@ task WMGame "Web & Mobile Game" {
       depends WMGame.deliveries.start
   }
 
-  task tback "Back End" {
+  task tBackEnd "Back End" {
     # It is necessary to “purge” the “chargeset” because it has been assigned previously to other variable 
     purge chargeset
     chargeset back
@@ -157,6 +157,7 @@ task WMGame "Web & Mobile Game" {
       effort 9d
       actual:effort 15d
       allocate dev3
+      plan: minstart 2023-06-01
       journalentry 2023-04-11 "Problems with the GUI design tool" {
         author dev3
         alert yellow
