@@ -85,6 +85,7 @@ task WMGame "Web & Mobile Game" {
   responsible boss
 
   task tback "Back End" {
+    purge chargeset
     chargeset back
     responsible dev1
     depends WMGame.tgdesign
@@ -95,6 +96,7 @@ task WMGame "Web & Mobile Game" {
   }
   
   task fMov "Frontend Movil" {
+    purge chargeset
     chargeset wFront
     responsible dev1
     depends WMGame.tgdesign
